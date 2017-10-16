@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-	<title>Leaflet.Geodesic Example - by Henry Thasler</title>
+	<title>Leaflet.Geodesic Example - by Henry Thasler, modified by Hidenori Fujimura</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -34,16 +34,15 @@
  <body>
 	<div id="map"></div>
 	<script>
-		var map = L.map('map').setView([50, -40], 3);
-        L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		var map = L.map('map').setView([35.362222, 138.731389], 3);
+        L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
 			maxZoom: 15,
 			noWrap: true,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '
+			attribution: '地理院タイル（標準地図）'
 		}).addTo(map);		
 		
 		var berlin = new L.LatLng(52.5, 13.35); 
-		var losangeles = new L.LatLng(33.82, -118.38);
+		var losangeles = new L.LatLng(35.362222, 138.731389);
 
 		var A = L.marker(losangeles, {draggable: true}).addTo(map);
 		var B = L.marker(berlin, {draggable: true}).addTo(map).bindPopup("Drag me.").openPopup();

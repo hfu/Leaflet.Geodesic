@@ -36,8 +36,8 @@
 	<script>
 		var map = L.map('map').setView([35.362222, 138.731389], 3);
         L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
-			maxZoom: 15,
-			noWrap: true,
+			maxZoom: 18,
+			noWrap: false,
 			attribution: '地理院タイル（標準地図）'
 		}).addTo(map);		
 		
